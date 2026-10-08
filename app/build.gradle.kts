@@ -94,6 +94,8 @@ dependencies {
     androidTestImplementation(libs.kotlinx.coroutines.test)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    // Espresso nuevo: el que trae Compose usa un método que Android 17 (API 37) ya no tiene.
+    androidTestImplementation(libs.androidx.test.espresso.core)
     // Compose necesita una Activity vacía donde dibujar la pantalla que se prueba.
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 }
